@@ -8,7 +8,7 @@ const fetchBreedDescription = function(breedName, callback) {
     }
     const data = JSON.parse(body);
     if (data[0] === undefined) {
-      callback("Error, check your url and try again.");
+      callback("Error, check your url and try again.", null);
     } else {
       callback(error, data[0]["description"]);
     }
